@@ -147,7 +147,6 @@
         isVisible: false,
         paddingBottom: false,
         imageLoading: false,
-        showThumbs: false,
         isFullScreenMode: false,
 
         // aspect ratio videos
@@ -175,7 +174,8 @@
         loopData: false,
         stylesInterval: {
           'display': 'block'
-        }
+        },
+        showThumbs: this.defaultShowThumbs,
       };
     },
 
@@ -292,6 +292,10 @@
       enableScrollLock: {
         type: Boolean,
         default: true,
+      },
+      defaultShowThumbs: {
+        type: Boolean,
+        default: false,
       },
     },
 
@@ -1149,7 +1153,6 @@
         this.stopSlideShow();
         this.swipeType = null;
         this.$emit("close", this.imgIndex);
-        this.showThumbs = false;
         this.imgIndex = null;
       },
 
@@ -1678,7 +1681,7 @@
     /* scoped */
     var __vue_scope_id__ = undefined;
     /* module identifier */
-    var __vue_module_identifier__ = "data-v-51197c43";
+    var __vue_module_identifier__ = "data-v-fa826e3e";
     /* functional template */
     var __vue_is_functional_template__ = false;
     /* style inject */

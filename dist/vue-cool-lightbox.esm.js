@@ -143,7 +143,6 @@ var script = {
       isVisible: false,
       paddingBottom: false,
       imageLoading: false,
-      showThumbs: false,
       isFullScreenMode: false,
 
       // aspect ratio videos
@@ -171,7 +170,8 @@ var script = {
       loopData: false,
       stylesInterval: {
         'display': 'block'
-      }
+      },
+      showThumbs: this.defaultShowThumbs,
     };
   },
 
@@ -288,6 +288,10 @@ var script = {
     enableScrollLock: {
       type: Boolean,
       default: true,
+    },
+    defaultShowThumbs: {
+      type: Boolean,
+      default: false,
     },
   },
 
@@ -1145,7 +1149,6 @@ var script = {
       this.stopSlideShow();
       this.swipeType = null;
       this.$emit("close", this.imgIndex);
-      this.showThumbs = false;
       this.imgIndex = null;
     },
 

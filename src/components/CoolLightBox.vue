@@ -340,7 +340,6 @@ export default {
       isVisible: false,
       paddingBottom: false,
       imageLoading: false,
-      showThumbs: false,
       isFullScreenMode: false,
 
       // aspect ratio videos
@@ -368,7 +367,8 @@ export default {
       loopData: false,
       stylesInterval: {
         'display': 'block'
-      }
+      },
+      showThumbs: this.defaultShowThumbs,
     };
   },
 
@@ -485,6 +485,10 @@ export default {
     enableScrollLock: {
       type: Boolean,
       default: true,
+    },
+    defaultShowThumbs: {
+      type: Boolean,
+      default: false,
     },
   },
 
@@ -1344,7 +1348,6 @@ export default {
       this.stopSlideShow();
       this.swipeType = null;
       this.$emit("close", this.imgIndex);
-      this.showThumbs = false;
       this.imgIndex = null;
     },
 
